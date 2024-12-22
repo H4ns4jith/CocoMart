@@ -316,7 +316,6 @@
     </section>
     <!-- end of Wholesale -->
 
-    <!-- blogs -->
     <section id = "offers" class = "py-5">
         <div class = "container">
             <div class = "row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
