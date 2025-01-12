@@ -1,3 +1,27 @@
+<?php
+    require_once 'connection/connection.php';
+?>
+<?php
+    if(isset($_POST['signup'])){
+        $mail = mysqli_real_escape_string($connection,$_POST['mail']);
+        $fname = mysqli_real_escape_string($connection,$_POST['fname']);
+        $lname = mysqli_real_escape_string($connection,$_POST['lname']);
+
+        if($_POST['cpswd'] == $_POST['pswd']){
+            $pswd = password_hash($_POST['pswd'],PASSWORD_DEFAULT);
+            $sql = "INSERT INTO users (fname,lname,mail,pswd) VALUES('{$fname}','{$lname}','{$mail}','{$pswd}')";
+            $result = mysqli_query($connection,$sql);
+
+            if($result){
+                header("Location: login.php");
+            }else{
+                echo "<script>alert('Not created');</script>";
+            }
+        }else{
+            echo "<script>alert('Password fields are not same');</script>";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

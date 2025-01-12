@@ -1,3 +1,28 @@
+<?php
+    require_once 'connection/connection.php';
+?>
+<?php
+    session_start();
+    
+    if(isset($_POST['login'])){
+        $mail = mysqli_real_escape_string($connection,$_POST['mail']);
+        $pswd = mysqli_real_escape_string($connection,$_POST['pswd']);
+
+        $sql = "SELECT * FROM users WHERE mail='{$mail}'";
+        $result_set = mysqli_query($connection, $sql);
+
+        if($result_set && mysqli_num_rows($result_set) == 1){
+            $row = mysqli_fetch_assoc($result_set);
+            $hashedPassword = $row['pswd'];
+
+            if(password_verify($pswd,$hashedPassword)){
+                $_SESSION['user_id'] = $row['userid'];
+                $_SESSION['fname'] = $row['fname'];
+                header("Location: index.php");
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
