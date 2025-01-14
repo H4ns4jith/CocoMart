@@ -1,6 +1,13 @@
 <?php
     require_once 'connection/connection.php';
 ?>
+<?php
+    if(isset($_POST['pst'])){
+        $title = mysqli_real_escape_string($connection,$_POST['title']);
+        $category = mysqli_real_escape_string($connection,$_POST['category']);
+        $descrp = mysqli_real_escape_string($connection,)
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,16 +59,16 @@
         <div class="col-md-8">
             <div class="form-container">
                 <h2 class="text-center mb-4">Ad Details</h2>
-                <form>
+                <form action="adpost.php" method="post">
                     <!-- Ad Title -->
                     <div class="mb-3">
                         <label for="adTitle" class="form-label">Ad Title</label>
-                        <input type="text" class="form-control" id="adTitle" placeholder="Enter your ad title" required>
+                        <input type="text" name="title" class="form-control" id="adTitle" placeholder="Enter your ad title" required>
                     </div>
                     <!-- Ad Category -->
                     <div class="mb-3">
                         <label for="adCategory" class="form-label">Category</label>
-                        <select class="form-select" id="adCategory" required>
+                        <select name="category" class="form-select" id="adCategory" required>
                             <option selected disabled>Choose a category</option>
                             <option value="electronics">Electronics</option>
                             <option value="fashion">Fashion</option>
@@ -72,7 +79,7 @@
                     <!-- Ad Description -->
                     <div class="mb-3">
                         <label for="adDescription" class="form-label">Description</label>
-                        <textarea class="form-control" id="adDescription" rows="5" placeholder="Describe your ad" required></textarea>
+                        <textarea name="textarea" class="form-control" id="adDescription" rows="5" placeholder="Describe your ad" required></textarea>
                     </div>
                     <!-- Upload Image -->
                     <div class="mb-3">
@@ -82,16 +89,16 @@
                     <!-- Price -->
                     <div class="mb-3">
                         <label for="adPrice" class="form-label">Price</label>
-                        <input type="number" class="form-control" id="adPrice" placeholder="Enter the price" required>
+                        <input name="price" type="number" class="form-control" id="adPrice" placeholder="Enter the price" required>
                     </div>
                     <!-- Contact Info -->
                     <div class="mb-3">
                         <label for="adContact" class="form-label">Contact Info</label>
-                        <input type="text" class="form-control" id="adContact" placeholder="Enter your contact details" required>
+                        <input name="contact" type="text" class="form-control" id="adContact" placeholder="Enter your contact details" required>
                     </div>
                     <!-- Submit Button -->
                     <div class="text-center">
-                        <button type="submit" class="btn btn-primary btn-lg">Post Ad</button>
+                        <button type="submit" name="pst" class="btn btn-primary btn-lg">Post Ad</button>
                     </div>
                 </form>
             </div>
