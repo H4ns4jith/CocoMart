@@ -12,7 +12,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <title>Ad Posting Page</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@
             background-color: #f8f9fa;
         }
         .header {
-            background: url('https://via.placeholder.com/1920x400') no-repeat center center/cover;
+            background: url(../images/banner-img-1.jpg) top/cover no-repeat;
             color: white;
             text-align: center;
             padding: 80px 0;
@@ -49,7 +49,7 @@
 
 <!-- Header Section -->
 <div class="header">
-    <h1>Post Your Ad</h1>
+    <h1 style="font-weight: bold; color: orange;" class="text-center mb-4">COCOMART</h1>
     <p>Reach thousands of potential customers with ease</p>
 </div>
 
