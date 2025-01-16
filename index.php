@@ -24,7 +24,7 @@
     <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
         <div class = "container">
             <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
-                <img src = "images/shopping-bag-icon.png" alt = "site icon">
+                <img src = "images/logo.jpg" alt = "site icon">
                 <span class = "text-uppercase fw-lighter ms-2">CocoMart</span>
             </a>
 

@@ -2,17 +2,56 @@
     require_once 'connection/connection.php';
 ?>
 <?php
+    session_start();
+
+    $id = $_SESSION['user_id'];
+
     if(isset($_POST['pst'])){
         $title = mysqli_real_escape_string($connection,$_POST['title']);
         $category = mysqli_real_escape_string($connection,$_POST['category']);
-        //$descrp = mysqli_real_escape_string($connection,)
+        $descrp = mysqli_real_escape_string($connection,$_POST['textarea']);
+        $contact = mysqli_real_escape_string($connection,$_POST['contact']);
+        $price = 100.00;
+
+        $uploadDir = 'images/uploads/';
+
+        $imageName = $_FILES['image']['name'];
+        $imageTmpName = $_FILES['image']['tmp_name'];
+        $uploadPath = $uploadDir . $imageName;
+
+        move_uploaded_file($imageTmpName, $uploadPath);
+        
+
+        $sql = "INSERT INTO items (itemname,itemprice,itemcategory,itemdetail,userid) VALUES('{$title}','{$price}','{$category}','{$descrp}',$id)";
+        $stmt = mysqli_query($connection,$sql);
+
+        /*
+        if(isset($_FILES['image']) && $_FILES['image']['error'] === 0){
+            echo "sfdf";
+            $imageName = $_FILES['image']['name'];
+            $imageTmpName = $_FILES['image']['tmp_name'];
+
+            $uploadDir = 'images/uploads/';
+            $newImageName = uniqid() . '_' . basename($imageName);
+            $uploadPath = $uploadDir . $newImageName;
+
+            if (move_uploaded_file($imageTmpName, $uploadPath)) {
+                // Save image name to the database
+                
+                
+            } else {
+                echo "Failed to upload image!";
+            }
+        */
+        
+
     }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ad Posting Page</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +61,7 @@
             background-color: #f8f9fa;
         }
         .header {
-            background: url(../images/banner-img-1.jpg) top/cover no-repeat;
+            background: url('https://via.placeholder.com/1920x400') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 80px 0;
@@ -49,7 +88,7 @@
 
 <!-- Header Section -->
 <div class="header">
-    <h1 style="font-weight: bold; color: orange;" class="text-center mb-4">COCOMART</h1>
+    <h1>Post Your Ad</h1>
     <p>Reach thousands of potential customers with ease</p>
 </div>
 
@@ -59,7 +98,7 @@
         <div class="col-md-8">
             <div class="form-container">
                 <h2 class="text-center mb-4">Ad Details</h2>
-                <form action="adpost.php" method="post">
+                <form action="adpost.php" method="post" enctype="multipart/form-data">
                     <!-- Ad Title -->
                     <div class="mb-3">
                         <label for="adTitle" class="form-label">Ad Title</label>
@@ -70,10 +109,8 @@
                         <label for="adCategory" class="form-label">Category</label>
                         <select name="category" class="form-select" id="adCategory" required>
                             <option selected disabled>Choose a category</option>
-                            <option value="electronics">Electronics</option>
-                            <option value="fashion">Fashion</option>
-                            <option value="home">Home & Furniture</option>
-                            <option value="vehicles">Vehicles</option>
+                            <option value="retail">Retail</option>
+                            <option value="wholesale">Whole Sale</option>
                         </select>
                     </div>
                     <!-- Ad Description -->
@@ -84,7 +121,7 @@
                     <!-- Upload Image -->
                     <div class="mb-3">
                         <label for="adImage" class="form-label">Upload Image</label>
-                        <input class="form-control" type="file" id="adImage" required>
+                        <input name="image" class="form-control" type="file" id="adImage" required>
                     </div>
                     <!-- Price -->
                     <div class="mb-3">
