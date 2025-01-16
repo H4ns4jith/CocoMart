@@ -22,28 +22,8 @@
         move_uploaded_file($imageTmpName, $uploadPath);
         
 
-        $sql = "INSERT INTO items (itemname,itemprice,itemcategory,itemdetail,userid) VALUES('{$title}','{$price}','{$category}','{$descrp}',$id)";
+        $sql = "INSERT INTO items (itemname,itemprice,itemcategory,itemdetail,imgname,userid) VALUES('{$title}','{$price}','{$category}','{$descrp}','{$imageName}',$id)";
         $stmt = mysqli_query($connection,$sql);
-
-        /*
-        if(isset($_FILES['image']) && $_FILES['image']['error'] === 0){
-            echo "sfdf";
-            $imageName = $_FILES['image']['name'];
-            $imageTmpName = $_FILES['image']['tmp_name'];
-
-            $uploadDir = 'images/uploads/';
-            $newImageName = uniqid() . '_' . basename($imageName);
-            $uploadPath = $uploadDir . $newImageName;
-
-            if (move_uploaded_file($imageTmpName, $uploadPath)) {
-                // Save image name to the database
-                
-                
-            } else {
-                echo "Failed to upload image!";
-            }
-        */
-        
 
     }
 ?>

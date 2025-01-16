@@ -99,77 +99,22 @@
 
             <div class = "row g-0">
                 <div class = "collection-list mt-4 row gx-0 gy-3">
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
-                        <div class = "collection-img position-relative">
-                            <img src = "images/Versatile Coconut Leaf Stick Broom for India _ Ubuy.jpeg" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
-                        </div>
-                        <div class = "text-center">
-                            <div class = "rating mt-3">
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                
-                            </div>
-                            <p class = "text-capitalize my-1">Sweeper</p>
-                            <span class = "fw-bold">Rs 300.00</span>
-                        </div>
-                    </div>
+                    <?php
+                        $sql = "select * from items where itemcategory='retail'";
+                        $result = mysqli_query($connection,$sql);
 
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 feat">
-                        <div class = "collection-img position-relative">
-                            <img src = "images/41eDzHxDWnL.jpg" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
-                        </div>
-                        <div class = "text-center">
-                            <div class = "rating mt-3">
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            </div>
-                            <p class = "text-capitalize my-1">coconut oil</p>
-                            <span class = "fw-bold">Rs 400.00</span>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 new">
-                        <div class = "collection-img position-relative">
-                            <img src = "images/images (1).jpeg" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
-                        </div>
-                        <div class = "text-center">
-                            <div class = "rating mt-3">
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            </div>
-                            <p class = "text-capitalize my-1">coconut water</p>
-                            <span class = "fw-bold">Rs 350.00</span>
-                        </div>
-                    </div>
-
-                    <div class = "col-md-6 col-lg-4 col-xl-3 p-2 best">
-                        <div class = "collection-img position-relative">
-                            <img src = "images/natural-handmade-coconut-shell-serving-spoonset-of-2-173-05702-pala-natural-handmade-coconut-shell-serving-s-cookware-brown-living-132988_600x.webp" class = "w-100">
-                            <span class = "position-absolute bg-primary text-white d-flex align-items-center justify-content-center">sale</span>
-                        </div>
-                        <div class = "text-center">
-                            <div class = "rating mt-3">
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                                <span class = "text-primary"><i class = "fas fa-star"></i></span>
-                            </div>
-                            <p class = "text-capitalize my-1">coconut spoon</p>
-                            <span class = "fw-bold">Rs 250.00</span>
-                        </div>
-                    </div>
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo "<div class='col-md-6 col-lg-4 col-xl-3 p-2 best'>";
+                            echo "<div class='collection-img position-relative'>";
+                                echo "<img src='images/uploads/" . $row['imgname'] . "' class='w-100'>";
+                                echo "<span class='position-absolute bg-primary text-white d-flex align-items-center justify-content-center'>sale</span>";
+                            echo "</div>";
+                            echo "<div class='text-center'>";
+                            echo "<a style='text-decoration:none;' href='item.php?item={$row['itemid']}' class='text-capitalize my-1'>" . $row['itemname'] . "</a>";
+                                echo "<br><span class='fw-bold'>Rs " . $row['itemprice'] . "</span>";
+                            echo "</div></div>";
+                        }
+                    ?>
                   
     <section id = "wholesale" class = "py-5">
         <div class = "container">
@@ -178,60 +123,22 @@
             </div>
 
             <div class = "special-list row g-0">
-                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                    <div class = "special-img position-relative overflow-hidden">
-                        <img src = "images/220b-d88f120e-966f-4962-99b5-1f69c2a6555d.webp" class = "w-100">
-                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
-                        </span>
-                    </div>
-                    <div class = "text-center">
-                        <p class = "text-capitalize mt-3 mb-1">Coconut husk</p>
-                        <span class = "fw-bold d-block">Rs 50.00 (per kilo)</span>
-                        <a href = "#" class = "btn btn-primary mt-3">Contact</a>
-                    </div>
-                </div>
+            <?php
+                        $sql = "select * from items where itemcategory='wholesale'";
+                        $result = mysqli_query($connection,$sql);
 
-                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                    <div class = "special-img position-relative overflow-hidden">
-                        <img src = "images/coconut-shells.jpg" class = "w-100">
-                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
-                           
-                        </span>
-                    </div>
-                    <div class = "text-center">
-                        <p class = "text-capitalize mt-3 mb-1">coconut shell</p>
-                        <span class = "fw-bold d-block">Rs 70.00 (per kilo)</span>
-                        <a href = "#" class = "btn btn-primary mt-3">Contact</a>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                    <div class = "special-img position-relative overflow-hidden">
-                        <img src = "images/coconut-shell-charcoal-500x500.webp" class = "w-100">
-                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
-                            
-                        </span>
-                    </div>
-                    <div class = "text-center">
-                        <p class = "text-capitalize mt-3 mb-1">coconut chacol</p>
-                        <span class = "fw-bold d-block">Rs 70.00 (per kilo)</span>
-                        <a href = "#" class = "btn btn-primary mt-3">Contact</a>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 col-xl-3 p-2">
-                    <div class = "special-img position-relative overflow-hidden">
-                        <img src = "images/s-l1200.jpg" class = "w-100">
-                        <span class = "position-absolute d-flex align-items-center justify-content-center text-primary fs-4">
-                            
-                        </span>
-                    </div>
-                    <div class = "text-center">
-                        <p class = "text-capitalize mt-3 mb-1">raw husk</p>
-                        <span class = "fw-bold d-block">Rs 70.00 (per kilo)</span>
-                        <a href = "#" class = "btn btn-primary mt-3">Contact</a>
-                    </div>
-                </div>
+                        while($row = mysqli_fetch_assoc($result)){
+                            echo "<div class='col-md-6 col-lg-4 col-xl-3 p-2 best'>";
+                            echo "<div class='collection-img position-relative'>";
+                                echo "<img src='images/uploads/" . $row['imgname'] . "' class='w-100'>";
+                                echo "<span class='position-absolute bg-primary text-white d-flex align-items-center justify-content-center'>sale</span>";
+                            echo "</div>";
+                            echo "<div class='text-center'>";
+                                echo "<a style='text-decoration:none;' href='item.php?item={$row['itemid']}' class='text-capitalize my-1'>" . $row['itemname'] . "</a>";
+                                echo "<br><span class='fw-bold'>Rs " . $row['itemprice'] . "</span>";
+                            echo "</div></div>";
+                        }
+                    ?>
             </div>
         </div>
     </section>
