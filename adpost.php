@@ -5,7 +5,7 @@
     if(isset($_POST['pst'])){
         $title = mysqli_real_escape_string($connection,$_POST['title']);
         $category = mysqli_real_escape_string($connection,$_POST['category']);
-        $descrp = mysqli_real_escape_string($connection,)
+        //$descrp = mysqli_real_escape_string($connection,)
     }
 ?>
 <!DOCTYPE html>

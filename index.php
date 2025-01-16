@@ -58,7 +58,7 @@
                         <a class = "nav-link text-uppercase text-dark" href = "#about">about us</a>
                     </li>
                     <li class = "nav-item px-2 py-2 border-0">
-                        <a class = "nav-link text-uppercase text-dark" href = "#popular">popular</a>
+                        <a class = "btn text-uppercase text-dark" href = "signup.php">Signup</a>
                     </li>
                 </ul>
             </div>
@@ -70,14 +70,14 @@
     <header id = "header" class = "vh-100 carousel slide" data-bs-ride = "carousel" style = "padding-top: 104px;">
         <div class = "container h-100 d-flex align-items-center carousel-inner">
             <div class = "text-center carousel-item active">
-                <h2 class = "text-capitalize text-white">best collection</h2>
-                <h1 class = "text-uppercase py-2 fw-bold text-white">new arrivals</h1>
-                <a href = "#" class = "btn mt-3 text-uppercase">shop now</a>
+                <h2 class = "text-capitalize text-white">COCOMART</h2>
+                <h1 class = "text-uppercase py-2 fw-bold text-white">JOING WITH US</h1>
+                <a href = "adpost.php" class = "btn mt-3 text-uppercase">Add Post</a>
             </div>
             <div class = "text-center carousel-item">
-                <h2 class = "text-capitalize text-white">best price & offer</h2>
-                <h1 class = "text-uppercase py-2 fw-bold text-white">new season</h1>
-                <a href = "#" class = "btn mt-3 text-uppercase">buy now</a>
+                <h2 class = "text-capitalize text-white">COCOMART</h2>
+                <h1 class = "text-uppercase py-2 fw-bold text-white">BEST SELLES SPOT</h1>
+                <a href = "adpost.php" class = "btn mt-3 text-uppercase">Add Post</a>
             </div>
         </div>
 
