@@ -11,16 +11,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cocomart</title>
-    <!-- fontawesome cdn -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- bootstrap css -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- custom css -->
+
     <link rel = "stylesheet" href = "css/main.css">
 </head>
 <body>
     
-    <!-- navbar -->
+
     <nav class = "navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
         <div class = "container">
             <a class = "navbar-brand d-flex justify-content-between align-items-center order-lg-0" href = "index.html">
@@ -30,7 +30,7 @@
 
             <div class = "order-lg-2 nav-btns">
                 <button type = "button" class = "btn position-relative">
-                    <i class = "fa fa-shopping-cart"></i>
+                    <a href="ShopingCart.php"><i class = "fa fa-shopping-cart"></i></a>
                     <span class = "position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
                 </button>
                 <button type = "button" class = "btn position-relative" >
@@ -64,9 +64,9 @@
             </div>
         </div>
     </nav>
-    <!-- end of navbar -->
 
-    <!-- header -->
+
+
     <header id = "header" class = "vh-100 carousel slide" data-bs-ride = "carousel" style = "padding-top: 104px;">
         <div class = "container h-100 d-flex align-items-center carousel-inner">
             <div class = "text-center carousel-item active">
@@ -88,9 +88,7 @@
             <span class = "carousel-control-next-icon"></span>
         </button>
     </header>
-    <!-- end of header -->
 
-    <!-- Retail Sale -->
     <section id = "retailsale" class = "py-5">
         <div class = "container">
             <div class = "title text-center">
@@ -142,7 +140,6 @@
             </div>
         </div>
     </section>
-    <!-- end of Wholesale -->
 
     <section id = "offers" class = "py-5">
         <div class = "container">
@@ -155,7 +152,7 @@
             </div>
         </div>
     </section>
-    <!-- about us -->
+
     <section id = "about" class = "py-5">
         <div class = "container">
             <div class = "row gy-lg-5 align-items-center">
@@ -178,96 +175,8 @@
             </div>
         </div>
     </section>
-    <!-- end of about us -->
-    banner-img-1
-    <!-- popular -->
-    <!--<section id = "popular" class = "py-5">
-        <div class = "container">
-            <div class = "title text-center pt-3 pb-5">
-                <h2 class = "position-relative d-inline-block ms-4">Popular Of This Year</h2>
-            </div>
 
-            <div class = "row">
-                <div class = "col-md-6 col-lg-4 row g-3">
-                    <h3 class = "fs-5">Top Rated</h3>
-                    <div class = "d-flex align-items-start justify-content-start">
-                        <img src = "images/Dummy-image.webp" alt = "" class = "img-fluid pe-3 w-25">
-                        <div>
-                            <p class = "mb-0">Product</p>
-                            <span>Rs 20.00</span>
-                        </div>
-                    </div>
-                    <div class = "d-flex align-items-start justify-content-start">
-                        <img src = "images/Dummy-image.webp" alt = "" class = "img-fluid pe-3 w-25">
-                        <div>
-                            <p class = "mb-0">Product</p>
-                            <span>Rs 20.00</span>
-                        </div>
-                    </div>
-                    <div class = "d-flex align-items-start justify-content-start">
-                        <img src = "images/Dummy-image.webp" alt = "" class = "img-fluid pe-3 w-25">
-                        <div>
-                            <p class = "mb-0">Product</p>
-                            <span>Rs 20.00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 row g-3">
-                    <h3 class = "fs-5">Product</h3>
-                    <div class = "d-flex align-items-start justify-content-start">
-                        <img src = "images/Dummy-image.webp" alt = "" class = "img-fluid pe-3 w-25">
-                        <div>
-                            <p class = "mb-0">Product</p>
-                            <span>Rs 20.00</span>
-                        </div>
-                    </div>
-                    <div class = "d-flex align-items-start justify-content-start">
-                        <img src = "images/Dummy-image.webp" alt = "" class = "img-fluid pe-3 w-25">
-                        <div>
-                            <p class = "mb-0">Product</p>
-                            <span>Rs 20.00</span>
-                        </div>
-                    </div>
-                    <div class = "d-flex align-items-start justify-content-start">
-                        <img src = "images/Dummy-image.webp" alt = "" class = "img-fluid pe-3 w-25">
-                        <div>
-                            <p class = "mb-0">Product</p>
-                            <span>Rs 20.00</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class = "col-md-6 col-lg-4 row g-3">
-                    <h3 class = "fs-5">On Sale</h3>
-                    <div class = "d-flex align-items-start justify-content-start">
-                        <img src = "images/Dummy-image.webp" alt = "" class = "img-fluid pe-3 w-25">
-                        <div>
-                            <p class = "mb-0">Product</p>
-                            <span>Rs 20.00</span>
-                        </div>
-                    </div>
-                    <div class = "d-flex align-items-start justify-content-start">
-                        <img src = "images/Dummy-image.webp" alt = "" class = "img-fluid pe-3 w-25">
-                        <div>
-                            <p class = "mb-0">Product</p>
-                            <span>Rs 20.00</span>
-                        </div>
-                    </div>
-                    <div class = "d-flex align-items-start justify-content-start">
-                        <img src = "images/Dummy-image.webp" alt = "" class = "img-fluid pe-3 w-25">
-                        <div>
-                            <p class = "mb-0">Product</p>
-                            <span>Rs 20.00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-     end of popular -->
-
-    <!-- newsletter -->
+   
     <section id = "newsletter" class = "py-5">
         <div class = "container">
             <div class = "d-flex flex-column align-items-center justify-content-center">
@@ -283,9 +192,7 @@
             </div>
         </div>
     </section>
-    <!-- end of newsletter -->
 
-    <!-- footer -->
     <footer class = "bg-dark py-5">
         <div class = "container">
             <div class = "row text-white g-4">
@@ -378,18 +285,13 @@
             </div>
         </div>
     </footer>
-    <!-- end of footer -->
 
-
-
-
-    <!-- jquery -->
     <script src = "js/jquery-3.6.0.js"></script>
-    <!-- isotope js -->
+
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
-    <!-- bootstrap js -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- custom js -->
+
     <script src = "js/script.js"></script>
 </body>
 </html>

@@ -33,7 +33,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ad Posting Page</title>
-    <!-- Bootstrap CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -66,25 +66,23 @@
 </head>
 <body>
 
-<!-- Header Section -->
 <div class="header">
     <h1>Post Your Ad</h1>
     <p>Reach thousands of potential customers with ease</p>
 </div>
 
-<!-- Main Content -->
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="form-container">
                 <h2 class="text-center mb-4">Ad Details</h2>
                 <form action="adpost.php" method="post" enctype="multipart/form-data">
-                    <!-- Ad Title -->
+                   
                     <div class="mb-3">
                         <label for="adTitle" class="form-label">Ad Title</label>
                         <input type="text" name="title" class="form-control" id="adTitle" placeholder="Enter your ad title" required>
                     </div>
-                    <!-- Ad Category -->
+                    
                     <div class="mb-3">
                         <label for="adCategory" class="form-label">Category</label>
                         <select name="category" class="form-select" id="adCategory" required>
@@ -93,27 +91,27 @@
                             <option value="wholesale">Whole Sale</option>
                         </select>
                     </div>
-                    <!-- Ad Description -->
+                    
                     <div class="mb-3">
                         <label for="adDescription" class="form-label">Description</label>
                         <textarea name="textarea" class="form-control" id="adDescription" rows="5" placeholder="Describe your ad" required></textarea>
                     </div>
-                    <!-- Upload Image -->
+                    
                     <div class="mb-3">
                         <label for="adImage" class="form-label">Upload Image</label>
                         <input name="image" class="form-control" type="file" id="adImage" required>
                     </div>
-                    <!-- Price -->
+                  
                     <div class="mb-3">
                         <label for="adPrice" class="form-label">Price</label>
                         <input name="price" type="number" class="form-control" id="adPrice" placeholder="Enter the price" required>
                     </div>
-                    <!-- Contact Info -->
+                  
                     <div class="mb-3">
                         <label for="adContact" class="form-label">Contact Info</label>
                         <input name="contact" type="text" class="form-control" id="adContact" placeholder="Enter your contact details" required>
                     </div>
-                    <!-- Submit Button -->
+                  
                     <div class="text-center">
                         <button type="submit" name="pst" class="btn btn-primary btn-lg">Post Ad</button>
                     </div>
@@ -123,14 +121,13 @@
     </div>
 </div>
 
-<!-- Footer -->
+
 <footer class="bg-dark text-white py-4">
     <div class="container text-center">
         <p>&copy; 2025 Cocomart. All rights reserved.</p>
     </div>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

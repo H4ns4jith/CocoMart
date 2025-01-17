@@ -10,7 +10,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item Page</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -38,7 +37,6 @@
 </head>
 <body>
 
-<!-- Main Content -->
 <div class="container my-5">
     <div class="row">
         <?php
@@ -48,11 +46,10 @@
 
             while($row = mysqli_fetch_assoc($result)){
         ?>
-        <!-- Item Image -->
         <div class="col-md-6">
             <img src="images/uploads/<?php echo $row['imgname']; ?>">
         </div>
-        <!-- Item Details -->
+
         <div class="col-md-6">
             <h1 class="mb-3"><?php echo $row['itemname']; ?></h1>
             <p class="text-muted">Category: <strong><?php echo $row['itemcategory']; ?></strong></p>
@@ -65,7 +62,7 @@
         </div>
     </div>
 
-    <!-- Related Items -->
+
     <div class="mt-5">
         <h3 class="mb-4">Related Items</h3>
         <div class="row">
@@ -113,14 +110,12 @@
     </div>
 </div>
 
-<!-- Footer -->
 <footer class="bg-dark text-white py-4">
     <div class="container text-center">
         <p>&copy; 2025 ItemPage. All rights reserved.</p>
     </div>
 </footer>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
