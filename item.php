@@ -57,7 +57,7 @@
             <p class="mt-4"><?php echo $row['itemdetail']; } ?></p>
             <div class="d-grid gap-2">
                 <button class="btn btn-primary btn-lg">Add to Cart</button>
-                <button class="btn btn-outline-secondary btn-lg">Add to Wishlist</button>
+                <button class="btn btn-outline-secondary btn-lg"  >Add to Wishlist</button>
             </div>
         </div>
     </div>
@@ -92,16 +92,6 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">coconut spoon</h5>
                         <p class="text-danger">Rs 250.00</p>
-                        <a href="#" class="btn btn-sm btn-primary">View Item</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" class="card-img-top" alt="Related Item">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Item Name</h5>
-                        <p class="text-danger">$29.99</p>
                         <a href="#" class="btn btn-sm btn-primary">View Item</a>
                     </div>
                 </div>
