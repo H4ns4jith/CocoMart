@@ -66,8 +66,8 @@
 </head>
 <body>
 
-<div class="header">
-    <h1>Post Your Ad</h1>
+<div class="header" style="background: url(../images/banner-img-1.jpg) top/cover no-repeat;">
+    <h1>COCOMART</h1>
     <p>Reach thousands of potential customers with ease</p>
 </div>
 

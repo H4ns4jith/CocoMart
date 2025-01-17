@@ -46,23 +46,23 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Sample Item 1</td>
-                    <td>$10.00</td>
+                    <td>Coconut Spoon</td>
+                    <td>100</td>
                     <td><input type="number" class="form-control" value="1" min="1" style="width: 80px;"></td>
-                    <td>$10.00</td>
+                    <td>100</td>
                     <td><button class="btn btn-danger btn-sm">Remove</button></td>
                 </tr>
                 <tr>
-                    <td>Sample Item 2</td>
-                    <td>$20.00</td>
+                    <td>coconut water</td>
+                    <td>150</td>
                     <td><input type="number" class="form-control" value="2" min="1" style="width: 80px;"></td>
-                    <td>$40.00</td>
+                    <td>300</td>
                     <td><button class="btn btn-danger btn-sm">Remove</button></td>
                 </tr>
             </tbody>
         </table>
         <div class="d-flex justify-content-between align-items-center mt-4">
-            <h4>Total: $50.00</h4>
+            <h4>Total: 400</h4>
             <button class="btn btn-primary btn-lg">Proceed to Checkout</button>
         </div>
     </div>
