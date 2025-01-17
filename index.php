@@ -104,7 +104,7 @@
                         while($row = mysqli_fetch_assoc($result)){
                             echo "<div class='col-md-6 col-lg-4 col-xl-3 p-2 best'>";
                             echo "<div class='collection-img position-relative'>";
-                                echo "<img src='images/uploads/" . $row['imgname'] . "' class='w-100'>";
+                                echo "<img src='images/uploads/" . $row['imgname'] . "' class='w-100'>" ;
                                 echo "<span class='position-absolute bg-primary text-white d-flex align-items-center justify-content-center'>sale</span>";
                             echo "</div>";
                             echo "<div class='text-center'>";
@@ -141,17 +141,6 @@
         </div>
     </section>
 
-    <section id = "offers" class = "py-5">
-        <div class = "container">
-            <div class = "row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
-                <div class = "offers-content">
-                    <span class = "text-white">COCOMART</span>
-                    <h2 class = "mt-2 mb-4 text-white">Best Place to Build your bisnusse</h2>
-                    <a href = "adpost.php" class = "btn">Add Post</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id = "about" class = "py-5">
         <div class = "container">

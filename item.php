@@ -47,7 +47,7 @@
             while($row = mysqli_fetch_assoc($result)){
         ?>
         <div class="col-md-6">
-            <img src="images/uploads/<?php echo $row['imgname']; ?>">
+            <img src="images/uploads/<?php echo $row['imgname']; ?>" width="500px" height="500px">
         </div>
 
         <div class="col-md-6">

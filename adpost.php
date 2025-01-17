@@ -11,7 +11,7 @@
         $category = mysqli_real_escape_string($connection,$_POST['category']);
         $descrp = mysqli_real_escape_string($connection,$_POST['textarea']);
         $contact = mysqli_real_escape_string($connection,$_POST['contact']);
-        $price = 100.00;
+        $price = $_POST['price'];
 
         $uploadDir = 'images/uploads/';
 
